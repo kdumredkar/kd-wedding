@@ -1,0 +1,331 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Royal Peshwai Gold Gradients -->
+    <linearGradient id="ganpatiGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF3D1"/>
+      <stop offset="25%" stop-color="#E8CA82"/>
+      <stop offset="50%" stop-color="#C4A15A"/>
+      <stop offset="75%" stop-color="#9A7734"/>
+      <stop offset="100%" stop-color="#D8C49A"/>
+    </linearGradient>
+
+    <linearGradient id="ganpatiGoldSoft" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#AA8232"/>
+      <stop offset="50%" stop-color="#D8BA70"/>
+      <stop offset="100%" stop-color="#FFF5DC"/>
+    </linearGradient>
+
+    <!-- Deep Peshwai Maroon / Kumkum Gradient for Tilak & Jewels -->
+    <linearGradient id="kumkumMaroon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A52B3C"/>
+      <stop offset="50%" stop-color="#792E38"/>
+      <stop offset="100%" stop-color="#4E151E"/>
+    </linearGradient>
+
+    <!-- Divine Radiant Aura Gradient -->
+    <radialGradient id="divineAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E8CA82" stop-opacity="0.35"/>
+      <stop offset="55%" stop-color="#C4A15A" stop-opacity="0.12"/>
+      <stop offset="85%" stop-color="#792E38" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#FAF4E8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Soft Glow Filter -->
+    <filter id="ganpatiGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      @keyframes haloSpinSlow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes auraBreathGlow {
+        0%, 100% { opacity: 0.55; transform: scale(0.96); }
+        50% { opacity: 0.95; transform: scale(1.03); }
+      }
+      @keyframes tilakRadiance {
+        0%, 100% { filter: drop-shadow(0 0 1px #A52B3C); opacity: 0.9; }
+        50% { filter: drop-shadow(0 0 6px #E8CA82); opacity: 1; }
+      }
+      @keyframes modakShimmer {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 2px #C4A15A); }
+        50% { transform: scale(1.06); filter: drop-shadow(0 0 7px #FFF3D1); }
+      }
+      @keyframes sparkleTwinkle {
+        0%, 100% { opacity: 0.25; transform: scale(0.65) rotate(0deg); }
+        50% { opacity: 1; transform: scale(1.15) rotate(45deg); }
+      }
+      @keyframes divineLevitate {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-3.5px); }
+      }
+
+      .aura-glow-layer {
+        transform-origin: 250px 245px;
+        animation: auraBreathGlow 5s ease-in-out infinite;
+      }
+      .halo-rotator {
+        transform-origin: 250px 245px;
+        animation: haloSpinSlow 100s linear infinite;
+      }
+      .ganpati-body {
+        transform-origin: 250px 250px;
+        animation: divineLevitate 6s ease-in-out infinite;
+      }
+      .tilak-glow {
+        animation: tilakRadiance 3s ease-in-out infinite;
+      }
+      .modak-pulse {
+        transform-origin: 168px 342px;
+        animation: modakShimmer 3.5s ease-in-out infinite;
+      }
+      .sparkle-peak {
+        transform-origin: 250px 42px;
+        animation: sparkleTwinkle 2.8s ease-in-out infinite;
+      }
+      .sparkle-side {
+        transform-origin: 355px 305px;
+        animation: sparkleTwinkle 3.2s ease-in-out infinite 1.4s;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .aura-glow-layer, .halo-rotator, .ganpati-body, .tilak-glow, .modak-pulse, .sparkle-peak, .sparkle-side {
+          animation: none !important;
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- 1. DIVINE AURA & RADIANCE BACKDROP -->
+  <circle class="aura-glow-layer" cx="250" cy="245" r="225" fill="url(#divineAura)"/>
+
+  <!-- 2. ORNAMENTAL PRABHAVALI (ROTATING HALO) -->
+  <g class="halo-rotator">
+    <!-- Outer Dotted Halo Boundary -->
+    <circle cx="250" cy="245" r="228" fill="none" stroke="url(#ganpatiGold)" stroke-width="1.2" stroke-dasharray="3, 7" opacity="0.55"/>
+    <circle cx="250" cy="245" r="214" fill="none" stroke="url(#ganpatiGold)" stroke-width="0.8" opacity="0.75"/>
+    <circle cx="250" cy="245" r="206" fill="none" stroke="url(#ganpatiGold)" stroke-width="0.5" stroke-dasharray="2, 4" opacity="0.45"/>
+
+    <!-- 16 Sacred Radiating Lotus Petals / Rays -->
+    <!-- North -->
+    <path d="M250,19 L255,30 L250,33 L245,30 Z" fill="url(#ganpatiGold)" opacity="0.8"/>
+    <!-- North-East -->
+    <path d="M410,85 L412,98 L407,100 L403,94 Z" fill="url(#ganpatiGold)" opacity="0.8"/>
+    <!-- East -->
+    <path d="M476,245 L465,250 L462,245 L465,240 Z" fill="url(#ganpatiGold)" opacity="0.8"/>
+    <!-- South-East -->
+    <path d="M410,405 L403,396 L407,390 L412,392 Z" fill="url(#ganpatiGold)" opacity="0.8"/>
+    <!-- South -->
+    <path d="M250,471 L245,460 L250,457 L255,460 Z" fill="url(#ganpatiGold)" opacity="0.8"/>
+    <!-- South-West -->
+    <path d="M90,405 L88,392 L93,390 L97,396 Z" fill="url(#ganpatiGold)" opacity="0.8"/>
+    <!-- West -->
+    <path d="M24,245 L35,240 L38,245 L35,250 Z" fill="url(#ganpatiGold)" opacity="0.8"/>
+    <!-- North-West -->
+    <path d="M90,85 L97,94 L93,100 L88,98 Z" fill="url(#ganpatiGold)" opacity="0.8"/>
+
+    <!-- Intermediate Rays -->
+    <circle cx="332" cy="48" r="2.5" fill="url(#ganpatiGold)" opacity="0.7"/>
+    <circle cx="447" cy="163" r="2.5" fill="url(#ganpatiGold)" opacity="0.7"/>
+    <circle cx="447" cy="327" r="2.5" fill="url(#ganpatiGold)" opacity="0.7"/>
+    <circle cx="332" cy="442" r="2.5" fill="url(#ganpatiGold)" opacity="0.7"/>
+    <circle cx="168" cy="442" r="2.5" fill="url(#ganpatiGold)" opacity="0.7"/>
+    <circle cx="53" cy="327" r="2.5" fill="url(#ganpatiGold)" opacity="0.7"/>
+    <circle cx="53" cy="163" r="2.5" fill="url(#ganpatiGold)" opacity="0.7"/>
+    <circle cx="168" cy="48" r="2.5" fill="url(#ganpatiGold)" opacity="0.7"/>
+  </g>
+
+  <!-- 3. LORD GANPATI MAIN SACRED FORM -->
+  <g class="ganpati-body" id="lord-ganesha">
+
+    <!-- A. BLOOMING LOTUS PEDESTAL (कमलासन) AT THE BASE -->
+    <g id="lotus-pedestal" stroke="url(#ganpatiGold)" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Lotus Center Petal -->
+      <path d="M250,402 C236,418 238,442 250,455 C262,442 264,418 250,402 Z" fill="url(#ganpatiGoldSoft)" stroke-width="1.2" opacity="0.95"/>
+      <!-- Inner Left Petals -->
+      <path d="M242,410 C218,420 205,438 214,452 C228,452 238,435 242,410 Z" fill="url(#ganpatiGold)" stroke-width="1" opacity="0.85"/>
+      <!-- Inner Right Petals -->
+      <path d="M258,410 C282,420 295,438 286,452 C272,452 262,435 258,410 Z" fill="url(#ganpatiGold)" stroke-width="1" opacity="0.85"/>
+      <!-- Outer Left Petals -->
+      <path d="M228,422 C196,430 178,444 182,455 C200,456 216,445 228,422 Z" fill="url(#ganpatiGoldSoft)" stroke-width="0.8" opacity="0.75"/>
+      <!-- Outer Right Petals -->
+      <path d="M272,422 C304,430 322,444 318,455 C300,456 284,445 272,422 Z" fill="url(#ganpatiGoldSoft)" stroke-width="0.8" opacity="0.75"/>
+      <!-- Pedestal Baseline Arc -->
+      <path d="M165,455 C210,465 290,465 335,455" fill="none" stroke-width="1.5" stroke="url(#ganpatiGold)" opacity="0.6"/>
+    </g>
+
+    <!-- B. LARGE ELEGANT EARS (सूपकर्ण) WITH ROYAL KUNDALS -->
+    <!-- Left Ear (Viewer's Left) -->
+    <g id="left-ear">
+      <!-- Main Ear Contour -->
+      <path d="M196,155 C150,152 110,185 112,236 C114,272 142,298 178,295 C190,294 198,284 200,272" 
+            fill="none" stroke="url(#ganpatiGold)" stroke-width="3" stroke-linecap="round"/>
+      <!-- Inner Ear Delicate Curve -->
+      <path d="M188,172 C156,172 128,196 130,232 C132,258 152,276 176,275" 
+            fill="none" stroke="url(#ganpatiGoldSoft)" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+      <!-- Golden Hanging Earring (Kundal) -->
+      <circle cx="128" cy="272" r="4.5" fill="url(#ganpatiGold)" stroke="url(#ganpatiGoldSoft)" stroke-width="0.8"/>
+      <path d="M128,276 C124,284 124,292 128,296 C132,292 132,284 128,276 Z" fill="url(#ganpatiGoldSoft)"/>
+    </g>
+
+    <!-- Right Ear (Viewer's Right) -->
+    <g id="right-ear">
+      <!-- Main Ear Contour -->
+      <path d="M304,155 C350,152 390,185 388,236 C386,272 358,298 322,295 C310,294 302,284 300,272" 
+            fill="none" stroke="url(#ganpatiGold)" stroke-width="3" stroke-linecap="round"/>
+      <!-- Inner Ear Delicate Curve -->
+      <path d="M312,172 C344,172 372,196 370,232 C368,258 348,276 324,275" 
+            fill="none" stroke="url(#ganpatiGoldSoft)" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+      <!-- Golden Hanging Earring (Kundal) -->
+      <circle cx="372" cy="272" r="4.5" fill="url(#ganpatiGold)" stroke="url(#ganpatiGoldSoft)" stroke-width="0.8"/>
+      <path d="M372,276 C368,284 368,292 372,296 C376,292 376,284 372,276 Z" fill="url(#ganpatiGoldSoft)"/>
+    </g>
+
+    <!-- C. ROYAL PESHWA MUKUT (CROWN) -->
+    <g id="crown">
+      <!-- Crown Base Headband with Jewels -->
+      <path d="M192,154 C225,160 275,160 308,154 L306,140 C275,145 225,145 194,140 Z" 
+            fill="url(#ganpatiGold)" stroke="url(#ganpatiGoldSoft)" stroke-width="1.2"/>
+      <!-- Headband Pearl Dots -->
+      <circle cx="210" cy="147" r="2" fill="#FFF5DC"/>
+      <circle cx="230" cy="149" r="2" fill="#FFF5DC"/>
+      <circle cx="250" cy="150" r="2.5" fill="url(#kumkumMaroon)"/>
+      <circle cx="270" cy="149" r="2" fill="#FFF5DC"/>
+      <circle cx="290" cy="147" r="2" fill="#FFF5DC"/>
+
+      <!-- Tier 1 Crown Body -->
+      <path d="M198,139 C204,115 220,95 240,90 L260,90 C280,95 296,115 302,139 Z" 
+            fill="url(#ganpatiGoldSoft)" stroke="url(#ganpatiGold)" stroke-width="1.8"/>
+      <!-- Tier 1 Ornamental Arches -->
+      <path d="M214,138 C222,118 234,106 250,105 C266,106 278,118 286,138" 
+            fill="none" stroke="url(#ganpatiGold)" stroke-width="1.2"/>
+
+      <!-- Tier 2 Upper Shikhara Peak -->
+      <path d="M226,90 C234,70 242,56 250,52 C258,56 266,70 274,90 Z" 
+            fill="url(#ganpatiGold)" stroke="url(#ganpatiGoldSoft)" stroke-width="1.5"/>
+
+      <!-- Royal Kalash & Trishul Crown Finial -->
+      <circle cx="250" cy="46" r="4.5" fill="url(#ganpatiGold)" stroke="#FFF5DC" stroke-width="0.8"/>
+      <path d="M250,42 L250,32" stroke="url(#ganpatiGold)" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- Central Ruby Jewel on Crown -->
+      <path class="tilak-glow" d="M250,110 C244,118 244,126 250,132 C256,126 256,118 250,110 Z" 
+            fill="url(#kumkumMaroon)" stroke="url(#ganpatiGold)" stroke-width="1"/>
+    </g>
+
+    <!-- D. FOREHEAD, CHANDRAKOR & SACRED TILAK (चंद्रकोर व कुंकुमतिळक) -->
+    <g id="forehead-tilak">
+      <!-- Head Contour -->
+      <path d="M208,158 C222,165 278,165 292,158" fill="none" stroke="url(#ganpatiGold)" stroke-width="2"/>
+
+      <!-- Traditional Maharashtrian Golden Chandrakor (Crescent Moon) -->
+      <path d="M232,192 C242,201 258,201 268,192 C258,197 242,197 232,192 Z" 
+            fill="url(#ganpatiGold)" stroke="url(#ganpatiGoldSoft)" stroke-width="0.8"/>
+
+      <!-- Sacred Kumkum / Sindoor Tilak (Urdhva Pundra & Bindu) -->
+      <g class="tilak-glow">
+        <!-- Vertical Tilak -->
+        <path d="M250,165 C248,172 248,180 250,185 C252,180 252,172 250,165 Z" 
+              fill="url(#kumkumMaroon)" stroke="url(#ganpatiGold)" stroke-width="0.6"/>
+        <!-- Central Auspicious Red Bindu inside Crescent -->
+        <circle cx="250" cy="193" r="3" fill="url(#kumkumMaroon)"/>
+      </g>
+    </g>
+
+    <!-- E. SERENE DIVINE EYES (शांत, प्रसन्न नयन) -->
+    <g id="divine-eyes" stroke="url(#ganpatiGold)" stroke-linecap="round">
+      <!-- Left Eye -->
+      <path d="M214,204 C222,201 230,202 235,206" fill="none" stroke-width="2"/>
+      <path d="M217,205 C222,208 228,208 232,206" fill="none" stroke-width="1" opacity="0.7"/>
+      <circle cx="225" cy="205" r="1.3" fill="url(#ganpatiGold)"/>
+
+      <!-- Right Eye -->
+      <path d="M286,204 C278,201 270,202 265,206" fill="none" stroke-width="2"/>
+      <path d="M283,205 C278,208 272,208 268,206" fill="none" stroke-width="1" opacity="0.7"/>
+      <circle cx="275" cy="205" r="1.3" fill="url(#ganpatiGold)"/>
+    </g>
+
+    <!-- F. SACRED TUSKS (एकदंत) -->
+    <g id="tusks">
+      <!-- Left Full Tusk (Viewer's Left / Bappa's Right - Ekadanta) -->
+      <path d="M214,250 C204,258 198,268 202,274 C205,274 212,266 218,255 Z" 
+            fill="#FFF9E6" stroke="url(#ganpatiGold)" stroke-width="1"/>
+      <!-- Right Broken Tusk (Sacred Mahabharata Tusk) -->
+      <path d="M286,250 C290,255 293,258 296,258 L294,252 Z" 
+            fill="#FFF9E6" stroke="url(#ganpatiGold)" stroke-width="1"/>
+    </g>
+
+    <!-- G. VAKRATUNDA: GRACEFUL CURVED TRUNK (वक्रतुंड सूंड) -->
+    <g id="trunk">
+      <!-- Main Trunk Body Flowing to Left Holding Modak -->
+      <path d="M236,216 
+               C234,242 238,272 242,298 
+               C244,324 238,354 218,368 
+               C196,380 172,374 158,356 
+               C148,342 152,326 166,322 
+               C176,318 184,326 182,336 
+               C180,344 172,348 166,344
+               C162,342 162,336 168,334
+               C174,332 178,338 174,342" 
+            fill="none" stroke="url(#ganpatiGold)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- Inner Dimension Trunk Highlight -->
+      <path d="M246,216 
+               C246,242 250,268 252,295 
+               C254,320 248,345 230,358 
+               C212,370 188,366 174,352" 
+            fill="none" stroke="url(#ganpatiGoldSoft)" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+
+      <!-- Golden Trunk Decorative Rings (सूंड आभूषण) -->
+      <path d="M239,262 C244,264 248,264 252,262" stroke="url(#ganpatiGold)" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M240,286 C245,288 249,288 253,286" stroke="url(#ganpatiGold)" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M238,312 C243,315 248,315 251,312" stroke="url(#ganpatiGold)" stroke-width="1.8" stroke-linecap="round"/>
+
+      <!-- Auspicious Trishul / Tilak Mark on Trunk -->
+      <circle cx="245" cy="274" r="1.8" fill="url(#kumkumMaroon)"/>
+      <circle cx="246" cy="299" r="1.8" fill="url(#kumkumMaroon)"/>
+    </g>
+
+    <!-- H. SACRED GOLDEN MODAK (मोदक) IN TRUNK -->
+    <g class="modak-pulse" id="sacred-modak">
+      <!-- Modak Base & Swirl -->
+      <path d="M168,332 
+               C160,332 154,340 156,348 
+               C158,354 165,358 172,357 
+               C178,356 183,350 182,344 
+               C180,338 174,332 168,332 Z" 
+            fill="url(#ganpatiGoldSoft)" stroke="url(#ganpatiGold)" stroke-width="1.2"/>
+      <!-- Modak Petal Ridges -->
+      <path d="M168,332 L163,354" stroke="url(#ganpatiGold)" stroke-width="0.8" opacity="0.8"/>
+      <path d="M168,332 L169,356" stroke="url(#ganpatiGold)" stroke-width="0.8" opacity="0.8"/>
+      <path d="M168,332 L175,353" stroke="url(#ganpatiGold)" stroke-width="0.8" opacity="0.8"/>
+      <!-- Modak Top Peak Spark -->
+      <circle cx="168" cy="331" r="1.5" fill="#FFF8E7"/>
+    </g>
+
+    <!-- I. BLESSING ABHAYA HASTA (अभयहस्त / वरदहस्त) -->
+    <g id="blessing-hand" stroke="url(#ganpatiGold)" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Right Forearm & Palm Raised in Blessing -->
+      <path d="M308,300 C324,295 342,298 346,312 C348,322 342,336 330,344 C318,350 306,342 304,330" 
+            fill="url(#ganpatiGoldSoft)" stroke-width="1.8" opacity="0.95"/>
+      <!-- Fingers in Abhaya Mudra -->
+      <path d="M336,298 C338,290 344,288 348,294 C352,300 348,310 344,316" fill="none" stroke-width="1.5"/>
+      <!-- Auspicious Sacred Swastika / Blessing Wheel in Palm Center -->
+      <circle cx="328" cy="324" r="3" fill="url(#kumkumMaroon)" opacity="0.9"/>
+    </g>
+
+  </g>
+
+  <!-- 4. CELESTIAL DIVINE SPARKLES (तेजस्वी तारे) -->
+  <!-- Peak Sparkle at Crown Top -->
+  <g class="sparkle-peak">
+    <path d="M250,34 L252,42 L260,44 L252,46 L250,54 L248,46 L240,44 L248,42 Z" fill="#FFF9E6"/>
+  </g>
+
+  <!-- Side Sparkle near Blessing Hand -->
+  <g class="sparkle-side">
+    <path d="M355,299 L356,305 L362,306 L356,307 L355,313 L354,307 L348,306 L354,305 Z" fill="#FFF9E6"/>
+  </g>
+</svg>

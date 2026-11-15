@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 40" width="100%" height="100%">
+  <defs>
+    <linearGradient id="divGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C6A56B" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#C6A56B" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#DFCA9B" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#C6A56B" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#C6A56B" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Thin divider lines -->
+  <line x1="20" y1="20" x2="165" y2="20" stroke="url(#divGrad)" stroke-width="1"/>
+  <line x1="235" y1="20" x2="380" y2="20" stroke="url(#divGrad)" stroke-width="1"/>
+  
+  <!-- Center botanical motif -->
+  <g fill="#C6A56B" stroke="#C6A56B">
+    <!-- Center diamond -->
+    <polygon points="200,14 206,20 200,26 194,20" fill="#DFCA9B"/>
+    <circle cx="185" cy="20" r="2.5"/>
+    <circle cx="215" cy="20" r="2.5"/>
+    <circle cx="173" cy="20" r="1.5"/>
+    <circle cx="227" cy="20" r="1.5"/>
+    <!-- Delicate petal flourishes -->
+    <path d="M200,10 C198,6 202,6 200,10" stroke-width="1" fill="none"/>
+    <path d="M200,30 C198,34 202,34 200,30" stroke-width="1" fill="none"/>
+  </g>
+</svg>
