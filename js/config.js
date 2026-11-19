@@ -98,7 +98,7 @@ window.WEDDING_CONFIG = {
       name: "Halad Sohala (हळद सोहळा)",
       type: "Auspicious Turmeric Ceremony",
       date: "Thursday, December 10, 2026",
-      time: "10:00 AM – 1:00 PM IST",
+      time: "06:00 PM – 11:00 PM IST",
       venue: "Home (Residence)",
       address: "Balabhaupeth, Panchpaoli, Nagpur",
       dressCode: "Auspicious Haldi Yellows & Festive Traditional",
